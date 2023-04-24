@@ -30,7 +30,7 @@ const verifySession = async () => {
             })
             .catch(error => console.log('error', error));
     }
-    refreshToken();
+    else refreshToken();
 }
 
 const refreshToken = async () => {
