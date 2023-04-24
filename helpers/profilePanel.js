@@ -3,7 +3,7 @@ const logout = () => {
     localStorage.removeItem("access");
     localStorage.removeItem("refresh");
     sessionStorage.clear();
-    window.location.replace('https://shineagain.auth.us-east-2.amazoncognito.com/logout?client_id=5g726fbmspvp9f3p6cc3s8q0qf&redirect_uri=http://localhost:5500/&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+test%2Fread+test%2Fwrite');
+    window.location.replace('https://shineagain.auth.us-east-2.amazoncognito.com/logout?client_id=5g726fbmspvp9f3p6cc3s8q0qf&redirect_uri=https%3A%2F%2Fwww.shine-again.me%2F&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+test%2Fread+test%2Fwrite');
 }
 
 const openPanel = () => {
