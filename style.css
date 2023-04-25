@@ -1,5 +1,9 @@
 :root {
     --gray: #9b9b9b;
+    --bck: #f0f0f0; 
+    --light-bck: #f8f8f8;
+    --primary: #d4a815;
+    --light-primary: #ffecb0b6;
 }
 #settingsPanel .imgContainer {
     align-items: center;
@@ -22,7 +26,7 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
     margin: 1rem;
-    background-color: #f0f0f0;
+    background-color: var(--bck);
     border-radius: 1rem;
     transition: background-color 150ms;
 }
@@ -46,7 +50,7 @@ body {
     margin: 0;
     width: 100%;
     height: 100%;
-    background-color: #f8f8f8;
+    background-color: var(--light-bck);
 }
 
 header {
@@ -83,7 +87,7 @@ h1 {
 
 #profile svg {
     width: 1.5rem;
-    fill: #9b9b9b;
+    fill: var(--gray);
     border-radius: 1rem;
     height: 1.5rem;
     padding: 0.3rem;
@@ -91,9 +95,9 @@ h1 {
 }
 
 #profile svg:hover {
-    fill: #d4a815;
+    fill: var(--primary);
     cursor: pointer;
-    background-color: #ffecb0b6;
+    background-color: var(--light-primary);
 }
 
 nav {
@@ -117,6 +121,8 @@ nav {
     transition: width 150ms;
     border-radius: 0 1rem 1rem 0;
     z-index: 100;
+    /* border: 2px solid var(--bck); */
+    box-shadow: 1px 5px 5px 2px rgba(0, 0, 0, 0.06);
     /* border: 2px solid #f0f0f0; */
     /* box-shadow: 1px 5px 5px 2px rgba(0, 0, 0, 0.06); */
 }
@@ -141,11 +147,11 @@ nav h2 {
     border-radius: 100%;
     border: 2px solid #d4a71500;
     transition: border 150ms, outline 150ms;
-    outline: #ffecb0b6 solid 0px;
+    outline: var(--light-primary) solid 0px;
     cursor: pointer;
 }
 .avatarSmall:hover {
-    outline: #ffecb0b6 solid 6px;
+    outline: var(--light-primary) solid 6px;
 }
 
 #profilePanel {
@@ -190,10 +196,10 @@ nav h2 {
     top: -0.3rem;
     right: -0.3rem;
     z-index: 2;
-    background-color: #f0f0f0;
+    background-color: var(--bck);
 }
 #selectAvatar {
-    outline: #f0f0f0 solid 2px;
+    outline: var(--bck) solid 2px;
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -208,7 +214,7 @@ nav h2 {
     margin: 0.5rem;
 }
 .selectableAvatar:hover {
-    outline: #ffecb0b6 solid 4px;
+    outline: var(--light-primary) solid 4px;
     cursor: pointer;
     border-radius: 100%;
 }
@@ -216,8 +222,8 @@ nav h2 {
     margin: 1rem 0;
 }
 #verified {
-    background-color: #ffecb0b6;
-    color: #d4a815;
+    background-color: var(--light-primary);
+    color: var(--primary);
     border-radius: 1rem;
     margin-left: 1rem;
     font-size: 0.6rem;
@@ -226,21 +232,21 @@ nav h2 {
 }
 #userData .label {
     font-size: small;
-    color: #9b9b9b;
+    color: var(--gray);
     font-weight: 500;
     margin-right: 0.5rem;
 }
 #userData input {
     border-radius: 1rem;
-    border: 2px solid #f0f0f0;
+    border: 2px solid var(--bck);
     padding: 0.4rem;
     width: calc(100% - 1rem);
-    outline: #ffecb0b6 solid 0px;
+    outline: var(--light-primary) solid 0px;
     transition: border 150ms, outline 150ms;
 }
 #userData input:focus {
-    border: 2px solid #d4a815;
-    outline: #ffecb0b6 solid 4px;
+    border: 2px solid var(--primary);
+    outline: var(--light-primary) solid 4px;
 }
 #userName {
     display: flex;
@@ -273,7 +279,7 @@ nav h2 {
 #profilePanel .options {
     display: flex;
     align-items: center;
-    color: #9b9b9b;
+    color: var(--gray);
     font-weight: bold;
     border-radius: 1rem;
     padding: 0.3rem;
@@ -281,13 +287,13 @@ nav h2 {
 }
 #profilePanel .options:hover {
     cursor: pointer;
-    background-color: #ffecb0b6;
-    color: #d4a815;
+    background-color: var(--light-primary);
+    color: var(--primary);
 }
 #profilePanel .options:hover svg {
-    background-color: #ffecb0b6;
-    fill: #d4a815;
-    color: #d4a815;
+    background-color: var(--light-primary);
+    fill: var(--primary);
+    color: var(--primary);
 }
 #profilePanel .name {
     justify-content: center;
@@ -337,9 +343,9 @@ nav div svg {
 }
 
 nav div:hover {
-    color: #d4a815;
-    background-color: #ffecb0b6;
-    fill: #d4a815;
+    color: var(--primary);
+    background-color: var(--light-primary);
+    fill: var(--primary);
 }
 
 #app {
@@ -400,7 +406,7 @@ h3 {
 }
 
 .hour {
-    border-top: 3px solid #f0f0f0;
+    border-top: 3px solid var(--bck);
     width: 80%;
     height: 3rem;
     margin: 0 1rem;
@@ -411,14 +417,14 @@ h3 {
     background-color: #fafafa;
 }
 .hour:focus {
-    background-color: #ffecb0b6;
+    background-color: var(--light-primary);
 }
 .hour div {
     width: 100%;
     height: 50%;
 }
 .ocupada {
-    background-color: #f0f0f0;
+    background-color: var(--bck);
 }
 .time {
     margin-top: -0.6rem;
@@ -440,7 +446,7 @@ h3 {
     border-radius: 1rem;
     padding: 0.5rem 1rem;
     box-shadow: 0px 0px 18px -10px rgba(0,0,0,1);
-    outline: #ffecb0b6 solid 0px;
+    outline: var(--light-primary) solid 0px;
     overflow-y: scroll;
     transition: box-shadow 150ms, outline 150ms;
 }
@@ -466,7 +472,7 @@ h3 {
     color: white;
 }
 #day:hover {
-    outline: #ffecb0b6 solid 0px;
+    outline: var(--light-primary) solid 0px;
 }
 #calendarSection {
     display: flex;
@@ -507,12 +513,12 @@ h3 {
     height: 3rem;
     justify-content: space-around;
     border-radius: 1rem;
-    background-color: #f0f0f0;
+    background-color: var(--bck);
     user-select: none;
 }
 #timeOptions p {
     border-radius: 1rem;
-    border: 4px solid #f0f0f0;
+    border: 4px solid var(--bck);
     display: flex;
     width: calc(33% - 8px);
     align-items: center;
@@ -528,7 +534,7 @@ h3 {
     background-color: #fff;
 }
 .hSelected {
-    background-color: #d4a815;
+    background-color: var(--primary);
     transition: background-color 150ms;
 }
 .hSelected:hover {
@@ -556,20 +562,20 @@ h3 {
     background-color: #fff;
     outline: #fff solid 3px;
     font-weight: bold;
-    color: #9b9b9b;
+    color: var(--gray);
     transition: background-color 150ms, color 150ms, outline 150ms;
 }
 .primary {
-    background-color: #f0f0f0;
-    color: #9b9b9b;
-    outline: #f0f0f0 solid 3px;
+    background-color: var(--bck);
+    color: var(--gray);
+    outline: var(--bck) solid 3px;
     font-weight: bold;
     transition: background-color 150ms, color 150ms, outline 150ms;
 }
 .primary:hover, .secondary:hover {
-    color: #d4a815;
-    outline: #ffecb0b6 solid 3px;
-    background-color: #ffecb0b6;
+    color: var(--primary);
+    outline: var(--light-primary) solid 3px;
+    background-color: var(--light-primary);
 }
 #btnsCalendar {
     display: flex;
@@ -579,7 +585,7 @@ h3 {
     justify-content: space-around;
     border-radius: 1rem 1rem 0 0;
     background-color: #fff;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 2px solid var(--bck);
 }
 h4 {
     font-size: larger;
@@ -622,13 +628,13 @@ td {
 
 .dayOfMonth {
     background-color: #fff;
-    outline: #f0f0f0 solid 2px;
+    outline: var(--bck) solid 2px;
     font-weight: 500;
 }
 
 td:not(.empty):hover {
-    background-color: #ffecb0b6;
-    outline: #d4a815 solid 2px;
+    background-color: var(--light-primary);
+    outline: var(--primary) solid 2px;
 }
 
 .empty {
@@ -636,14 +642,14 @@ td:not(.empty):hover {
 }
 
 .today {
-    outline: #9b9b9b solid 2px;
+    outline: var(--gray) solid 2px;
     background-color: white;
 }
 .half {
     transition: outline 150ms, background-color 150ms;
 }
 .firstHalf {
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--bck);
 }
 #respuestas {
     display: flex;
@@ -672,7 +678,7 @@ td:not(.empty):hover {
 #preguntaPapa {
     display: flex;
     align-items: end;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 2px solid var(--bck);
     padding: 0.5rem 0;
 }
 #preguntaPanel {
@@ -692,8 +698,8 @@ td:not(.empty):hover {
     justify-content: right;
 }
 #buttonContainer button {
-    background-color: #ffecb0b6;
-    color: #d4a815;
+    background-color: var(--light-primary);
+    color: var(--primary);
     padding: 1rem;
     font-weight: bold;
 }
@@ -707,8 +713,8 @@ td:not(.empty):hover {
 }
 
 .navActive {
-    fill: #d4a815;
-    color: #d4a815;
+    fill: var(--primary);
+    color: var(--primary);
 }
 
 article {
@@ -721,8 +727,8 @@ article {
     width: calc(100% - 6rem - 4px);
     border: 2px solid #ffffff00;
     box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.06);
-    color: #9b9b9b;
-    outline: #ffecb0b6 solid 0px;
+    color: var(--gray);
+    outline: var(--light-primary) solid 0px;
     background-color: #fff;
     transition: outline 150ms, border 150ms;
 }
@@ -761,8 +767,8 @@ article textarea:focus {
 }
 
 article:focus-within {
-    outline: #ffecb0b6 solid 6px;
-    border: 2px solid #d4a815;
+    outline: var(--light-primary) solid 6px;
+    border: 2px solid var(--primary);
 }
 
 article:focus-within b {
@@ -792,8 +798,8 @@ article:focus-within b {
     display: none;
 }
 .btnAgregar:focus-within svg {
-    stroke: #d4a815;
-    fill: #d4a815;
+    stroke: var(--primary);
+    fill: var(--primary);
 }
 button {
     display: flex;
@@ -807,16 +813,16 @@ button {
 
 button:hover {
     cursor: pointer;
-    background-color: #ffecb0b6;
+    background-color: var(--light-primary);
 }
 
 button:hover svg {
-    fill: #d4a815;
+    fill: var(--primary);
 }
 
 button svg {
     height: 1.5rem;
-    fill: #9b9b9b;
+    fill: var(--gray);
     transition: fill 150ms;
 }
 
@@ -855,7 +861,7 @@ iframe {
     header {
         padding-left: 1rem;
         width: calc(100% - 1rem);
-        background-color: #f8f8f8;
+        background-color: var(--light-bck);
     }
 
     nav {
