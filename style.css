@@ -98,12 +98,18 @@ h1 {
 
 nav {
     display: flex;
-    flex-direction: column;
+
+    justify-content: center;
+
     height: calc(100vh - 6rem);
     width: 12rem;
-    padding: 1rem;
-    padding-top: 5rem;
-    overflow: hidden;
+
+    height: 5rem;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+    /* padding-top: 5rem; */
+    /* overflow: hidden; */
     top: 0;
     left: 0;
     position: fixed;
@@ -112,15 +118,12 @@ nav {
     border-radius: 0 1rem 1rem 0;
     z-index: 100;
     /* border: 2px solid #f0f0f0; */
-    box-shadow: 1px 5px 5px 2px rgba(0, 0, 0, 0.06);
+    /* box-shadow: 1px 5px 5px 2px rgba(0, 0, 0, 0.06); */
 }
 
 nav h2 {
-    font-size: medium;
-}
-
-nav svg {
-    margin: 0 1rem;
+    font-size: small;
+    padding-right: 1rem;
 }
 
 #logo {
@@ -129,7 +132,7 @@ nav svg {
 }
 
 .icon {
-    height: 2rem;
+    height: 1.5rem;
 
 }
 
@@ -298,12 +301,13 @@ nav svg {
     fill: black;
 }
 
-nav div {
+.menuOption {
     display: flex;
     position: relative;
     height: 2.5rem;
-    width: 12rem;
+    width: 10rem;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: var(--gray);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -324,7 +328,6 @@ nav div {
 
 nav div svg {
     width: 2rem;
-    margin-right: 1rem;
     transition: margin 150ms;
     user-select: none;
 }
