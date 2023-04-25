@@ -1,8 +1,11 @@
 const loadHome = async () => {
     loadNotas();
     var myHeaders = new Headers();
-    if(!localStorage.getItem("access"))
+    if(!localStorage.getItem("access")){
+        console.log("Verifying session");
         await verifySession();
+
+    }
 
     myHeaders.append("Authorization", "Bearer " + localStorage.getItem("access"));
 
