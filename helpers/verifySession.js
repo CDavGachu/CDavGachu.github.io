@@ -11,8 +11,11 @@ const verifySession = async () => {
         await fetch(`https://fz853w9zuj.execute-api.us-east-2.amazonaws.com/dev/auth?grant_code=${grantCode}`, requestOptions)
             .then(response => response.json())
             .then(result => {
-                if (result.error)
-                    return toSignin();
+                if (result.error) {
+                    console.log(result);
+                    console.log(result.error);
+                    return// toSignin();
+                }
 
                 // Obtiene la URL actual
                 let url = new URL(window.location.href);
