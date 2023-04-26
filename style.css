@@ -1,6 +1,6 @@
 :root {
     --gray: #868383;
-    --bck: #e2e2e2; 
+    --bck: #f0eeee; 
     --back: #fcfcfc; 
     --light-bck: #fff;
     --primary: #e4b51a;
@@ -8,6 +8,8 @@
     --card-bck:#fff;
     --icon-color: #b6deff;
     --icon-color-fill: #2e7ec0;
+    --colored-background: #f5faff;
+    --colored-border: #d1def1;
     /* --gray: #889bb4;
     --bck: #c9e5f8; 
     --light-bck: #fff;
@@ -127,7 +129,7 @@ nav {
     transition: width 150ms;
     /* border-radius: 0 1rem 1rem 0; */
     z-index: 100;
-    border-bottom: var(--bck) solid 2px;
+    /* border-bottom: var(--bck) solid 2px; */
     /* border: 2px solid var(--bck); */
     /* border: 2px solid #f0f0f0; */
     /* box-shadow: 1px 5px 5px 2px rgba(0, 0, 0, 0.06); */
@@ -322,7 +324,7 @@ nav {
     margin: 0;
 }
 #firstPanel {
-    height: 12rem;
+    height: 14rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -531,6 +533,13 @@ h3 {
 #calendarSection {
     display: flex;
     width: 100%;
+}
+.card {
+    background-color: var(--card-bck);
+    border: var(--bck) solid 2px;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
 }
 #firstC {
     width: 55%;
@@ -907,6 +916,18 @@ iframe {
     margin-right: 10rem;
     align-items: center;
     justify-content: center;
+}
+.phrase {
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    text-align: justify;
+    background-color: var(--colored-background);
+    outline: var(--colored-border) solid 2px;
+    color: #303030;
+}
+.phrase:hover {
+    outline: var(--colored-border) solid 2px;
+
 }
 @media screen and (max-width:800px) {
     .menuOption svg {
