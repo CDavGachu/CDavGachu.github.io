@@ -30,7 +30,7 @@ const closeSettings = () => {
     const panel = document.getElementById("profilePanel");
     const firstPanel = document.getElementById("firstPanel");
     const settingsPanel = document.getElementById("settingsPanel");
-    firstPanel.style.display = "block";
+    firstPanel.style.display = "flex";
     settingsPanel.style.display = "none";
 
     panel.classList.remove("openedSettings");

@@ -1,10 +1,13 @@
 :root {
     --gray: #868383;
     --bck: #e2e2e2; 
+    --back: #fcfcfc; 
     --light-bck: #fff;
-    --primary: #d4a815;
-    --light-primary: #ffecb0b6;
+    --primary: #e4b51a;
+    --light-primary: #ffedb070;
     --card-bck:#fff;
+    --icon-color: #b6deff;
+    --icon-color-fill: #2e7ec0;
     /* --gray: #889bb4;
     --bck: #c9e5f8; 
     --light-bck: #fff;
@@ -56,7 +59,7 @@ body {
     margin: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--light-bck);
+    background-color: var(--back);
 }
 
 header {
@@ -120,7 +123,7 @@ nav {
     top: 0;
     left: 0;
     position: fixed;
-    background-color: var(--light-bck);
+    background-color: var(--back);
     transition: width 150ms;
     /* border-radius: 0 1rem 1rem 0; */
     z-index: 100;
@@ -171,7 +174,7 @@ nav {
     flex-direction: column;
     box-shadow: -1px 0px 5px 2px rgba(0, 0, 0, 0.03);
     border: var(--bck) solid 2px;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     justify-content: space-around;
     text-align: center;
     user-select: none;
@@ -313,15 +316,27 @@ nav {
 #profilePanel .name {
     justify-content: center;
     color: #000;
-    font-size: large;
+    font-size: larger;
 }
 #profilePanel div p {
     margin: 0;
 }
+#firstPanel {
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 #active {
     fill: black;
 }
-
+.titleIcon {
+    background-color: var(--icon-color);
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+    fill: var(--icon-color-fill);
+}
 .menuOption {
     display: flex;
     position: relative;
@@ -346,8 +361,10 @@ nav {
     -ms-touch-action: manipulation;
     touch-action: manipulation;
 }
-
-nav div svg {
+#mainLogo svg {
+    width: 2rem;
+}
+.menuOption svg {
     width: 2rem;
     transition: margin 150ms;
     user-select: none;
@@ -386,8 +403,7 @@ h1 {
 }
 
 #app {
-    margin-left: 17rem;
-    margin-top: 5rem;
+    margin: 5rem;
     height: auto;
     padding-bottom: 5rem;
 }
@@ -725,7 +741,8 @@ td:not(.empty):hover {
     background-color: white;
     border-radius: 1rem;
     padding: 1rem;
-    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.06);
+    /* box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.06); */
+    border: var(--bck) solid 2px;
     height: 15rem;
 
     display: flex;
@@ -737,6 +754,7 @@ td:not(.empty):hover {
     display: flex;
     justify-content: right;
 }
+
 #buttonContainer button {
     background-color: var(--light-primary);
     color: var(--primary);
@@ -755,6 +773,7 @@ td:not(.empty):hover {
 .navActive {
     fill: var(--primary);
     color: var(--primary);
+    background-color: var(--light-primary);
 }
 
 article {
@@ -773,7 +792,7 @@ article {
     transition: outline 150ms, border 150ms;
 }
 article:hover {
-    outline: var(--light-primary) solid 3px;
+    outline: var(--gray) solid 2px;
 }
 article:not(.notes) b {
     display: flex;
@@ -877,6 +896,8 @@ iframe {
 }
 
 #welcome {
+    display: flex;
+    align-items: center;
     transition: color 150ms, width 150ms;
 }
 #loadingHTML {
@@ -888,6 +909,12 @@ iframe {
     justify-content: center;
 }
 @media screen and (max-width:800px) {
+    .menuOption svg {
+        height: 2rem;
+    }
+    #profile {
+        padding: 0;
+    }
     #calendarSection, #homeContent, #contenido {
         flex-direction: column;
     }
@@ -935,6 +962,7 @@ iframe {
         align-items: center;
         background-color: var(--light-bck);
         border: var(--bck) solid 2px;
+        border-radius:  1rem 1rem 0 0;
     }
     article {
         width: calc(100% - 6rem - 4px);
@@ -995,6 +1023,16 @@ iframe {
 }
 
 @media screen and (max-width:500px) {
+    h3 {
+        font-size: larger;
+    }
+    .titleIcon {
+        height: 1rem;
+        width: 1rem;
+    }
+    .openedSettings {
+        width: calc(100% - 3rem);
+    }
     .menuOption {
         display: flex;
         justify-content: center;
@@ -1006,6 +1044,9 @@ iframe {
     iframe {
         width: 100%;
         height: 13rem;
+    }
+    nav {
+        border: none;
     }
 }
 
