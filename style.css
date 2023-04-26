@@ -1,7 +1,7 @@
 :root {
     --gray: #868383;
     --bck: #f0eeee; 
-    --back: #fcfcfc; 
+    --back: #f8f8f8; 
     --light-bck: #fff;
     --primary: #e4b51a;
     --light-primary: #ffedb070;
@@ -157,13 +157,13 @@ nav {
 .avatarSmall {
     height: 2.5rem;
     border-radius: 100%;
-    border: 2px solid #d4a71500;
+    border: 2px solid var(--light-primary);
     transition: border 150ms, outline 150ms;
-    outline: var(--light-primary) solid 0px;
+    outline: var(--primary) solid 2px;
     cursor: pointer;
 }
 .avatarSmall:hover {
-    outline: var(--light-primary) solid 6px;
+    outline: var(--primary) solid 3px;
 }
 
 #profilePanel {
@@ -336,8 +336,8 @@ nav {
     padding: 0.3rem;
     border-radius: 0.5rem;
     margin-right: 1rem;
-    height: 2rem;
-    width: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
 .green {
@@ -402,6 +402,7 @@ nav {
     transform: rotate(360deg);
 }
 h1 {
+    font-family: 'Montserrat', serif;
     font-size: 1.5rem;
     transition: color 150ms;
     user-select: none;
