@@ -5,26 +5,30 @@
 <div id="calendarApp">
 <div id="calendarSection" class="calendarSectionInvisible">
     <div id="firstC">
-    <h3>Calendario</h3>
-        <div id="calendar">
-            <div id="btnsCalendar">
-                <button class="monthBtn" onclick="generateLastMonthCalendar()">
-                    <img src="./src/icons/leftarrow.png" alt="">
-                </button>
-                <h4 id="monthTitle">Abril</h4>
-                <button class="monthBtn" onclick="generateNextMonthCalendar()">
-                    <img src="./src/icons/rightarrow.png" alt="">
-                </button>
+        <div class="card">
+            <h3>Calendario</h3>
+            <div id="calendar">
+                <div id="btnsCalendar">
+                    <button class="monthBtn" onclick="generateLastMonthCalendar()">
+                        <img src="./src/icons/leftarrow.png" alt="">
+                    </button>
+                    <h4 id="monthTitle">Abril</h4>
+                    <button class="monthBtn" onclick="generateNextMonthCalendar()">
+                        <img src="./src/icons/rightarrow.png" alt="">
+                    </button>
+                </div>
+                <table id="calendarDays">
+                </table>
             </div>
-            <table id="calendarDays">
-            </table>
         </div>
     </div>
     <div id="secondC">
-        <h3><br></h3>
-        <!-- <i>No hay citas agendadas</i> -->
-        <div id="todates">
-            
+        <div class="card">
+            <h3>Agendadas</h3>
+            <!-- <i>No hay citas agendadas</i> -->
+            <div id="todates">
+
+            </div>
         </div>
     </div>
 </div>
