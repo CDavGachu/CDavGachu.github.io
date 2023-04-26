@@ -52,7 +52,7 @@ let appointments = [];
 const generateHours = async () => {
     const hours = document.getElementById("hours");
     hours.innerHTML = "";
-    for (let index = 8; index < 20; index++) {
+    for (let index = 17; index < 19; index++) {
         let hour =
             `
         <div class="hourInfo">

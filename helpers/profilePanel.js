@@ -9,9 +9,11 @@ const logout = () => {
 const openPanel = () => {
     const panel = document.getElementById("profilePanel");
     panel.style.display = "flex";
+    panel.classList.add('growthPanel');
 }
 const closePanel = () => {
     const panel = document.getElementById("profilePanel");
+    panel.classList.remove('growthPanel');
     panel.style.display = "none";
 }
 const openSettings = () => {

@@ -1,9 +1,15 @@
 :root {
-    --gray: #9b9b9b;
-    --bck: #f0f0f0; 
-    --light-bck: #f8f8f8;
+    --gray: #868383;
+    --bck: #e2e2e2; 
+    --light-bck: #fff;
     --primary: #d4a815;
     --light-primary: #ffecb0b6;
+    --card-bck:#fff;
+    /* --gray: #889bb4;
+    --bck: #c9e5f8; 
+    --light-bck: #fff;
+    --primary: #158ed4;
+    --light-primary: #b0e2ffb6; */
 }
 #settingsPanel .imgContainer {
     align-items: center;
@@ -68,9 +74,6 @@ header {
     height: 2rem;
     filter: opacity(50%);
 }
-h1 {
-    font-size: 1.5rem;
-}
 
 #profile {
     display: flex;
@@ -103,35 +106,39 @@ h1 {
 nav {
     display: flex;
 
-    justify-content: center;
+    justify-content: space-between;
 
     height: calc(100vh - 6rem);
     width: 12rem;
 
     height: 5rem;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 2rem);
     padding: 0 1rem;
     /* padding-top: 5rem; */
     /* overflow: hidden; */
     top: 0;
     left: 0;
     position: fixed;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--light-bck);
     transition: width 150ms;
-    border-radius: 0 1rem 1rem 0;
+    /* border-radius: 0 1rem 1rem 0; */
     z-index: 100;
+    border-bottom: var(--bck) solid 2px;
     /* border: 2px solid var(--bck); */
-    box-shadow: 1px 5px 5px 2px rgba(0, 0, 0, 0.06);
     /* border: 2px solid #f0f0f0; */
     /* box-shadow: 1px 5px 5px 2px rgba(0, 0, 0, 0.06); */
 }
 
-nav h2 {
+#navButtons h2 {
     font-size: small;
     padding-right: 1rem;
 }
-
+#navButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+}
 #logo {
     height: 2rem;
     width: 3.5rem;
@@ -162,7 +169,8 @@ nav h2 {
     top: 0.3rem;
     right: 0.3rem;
     flex-direction: column;
-    box-shadow: -1px 0px 15px 2px rgba(0, 0, 0, 0.06);
+    box-shadow: -1px 0px 5px 2px rgba(0, 0, 0, 0.03);
+    border: var(--bck) solid 2px;
     padding: 1rem;
     justify-content: space-around;
     text-align: center;
@@ -179,8 +187,15 @@ nav h2 {
     width: 5rem;
 }
 .smallPanel {
+    height: 0rem;
+    width: 0rem;
+    transition: height 150ms, width 150ms;
+}
+.growthPanel {
+    display: flex;
     height: 12rem;
     width: 12rem;
+    transition: height 150ms, width 150ms;
 }
 .openedSettings {
     width: 20rem;
@@ -310,7 +325,7 @@ nav h2 {
 .menuOption {
     display: flex;
     position: relative;
-    height: 2.5rem;
+    height: 2rem;
     width: 10rem;
     align-items: center;
     justify-content: center;
@@ -337,12 +352,34 @@ nav div svg {
     transition: margin 150ms;
     user-select: none;
 }
+#mainLogo {
+    display: flex;
+    align-items: center;
+    fill: var(--primary);
+    justify-content: space-between;
+    width: 12rem;
+}
+#mainLogo svg {
+    transform: rotate(0deg);
+    transition: transform 350ms;
+}
+#mainLogo:hover {
+    color: var(--primary);
+}
+#mainLogo:hover svg {
+    transform: rotate(360deg);
+}
+h1 {
+    font-size: 1.5rem;
+    transition: color 150ms;
+    user-select: none;
+}
 
 #logo {
     margin-left: 2rem;
 }
 
-nav div:hover {
+.menuOption:hover {
     color: var(--primary);
     background-color: var(--light-primary);
     fill: var(--primary);
@@ -445,7 +482,8 @@ h3 {
     top:5rem;
     border-radius: 1rem;
     padding: 0.5rem 1rem;
-    box-shadow: 0px 0px 18px -10px rgba(0,0,0,1);
+    box-shadow: -1px 0px 5px 2px rgba(0, 0, 0, 0.03);
+    border: var(--bck) solid 2px;
     outline: var(--light-primary) solid 0px;
     overflow-y: scroll;
     transition: box-shadow 150ms, outline 150ms;
@@ -494,7 +532,8 @@ h3 {
     align-items: center;
     background-color: white;
     border-radius: 1rem;
-    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.06);
+    border: var(--bck) solid 2px;
+    /* box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.06); */
     width: calc(100% - 2rem);
     margin: 1rem 0;
     padding: 1rem;
@@ -597,8 +636,9 @@ h4 {
 }
 
 #calendar {
-    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.06);
-    border-radius: 1rem
+    /* box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.06); */
+    border-radius: 1rem;
+    border: var(--bck) solid 2px;
 }
 table {
     font-family: 'Poppins', sans-serif;
@@ -726,13 +766,15 @@ article {
     margin: 1rem 0;
     width: calc(100% - 6rem - 4px);
     border: 2px solid #ffffff00;
-    box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.06);
+    /* box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.06); */
     color: var(--gray);
-    outline: var(--light-primary) solid 0px;
-    background-color: #fff;
+    outline: var(--bck) solid 2px;
+    background-color: var(--card-bck);
     transition: outline 150ms, border 150ms;
 }
-
+article:hover {
+    outline: var(--light-primary) solid 3px;
+}
 article:not(.notes) b {
     display: flex;
     height: 0;
@@ -752,7 +794,9 @@ article div textarea {
     width: 100%;
     resize: none;
 }
-
+textarea {
+    background-color: #ffffff00;
+}
 .notes textarea {
     width: 100%;
 }
@@ -867,16 +911,31 @@ iframe {
     nav {
         width: calc(100% - 1rem);
         height: 5rem;
-        bottom: 0;
+        /* bottom: 0; */
         padding: 0 0.5rem;
-        top: auto;
+        /* top: auto; */
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         border-radius: 1rem 1rem 0 0;
-        box-shadow: -1px 0px 15px 2px rgba(0, 0, 0, 0.1);
+        /* box-shadow: -1px 0px 15px 2px rgba(0, 0, 0, 0.1); */
     }
-
+    #mainLogo {
+        width: 11.5rem;
+        margin: 0;
+    }
+    #navButtons {
+        position: fixed;
+        height: 4rem;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: calc(100% - 2rem);
+        padding: 0 1rem;
+        align-items: center;
+        background-color: var(--light-bck);
+        border: var(--bck) solid 2px;
+    }
     article {
         width: calc(100% - 6rem - 4px);
     }
@@ -902,11 +961,12 @@ iframe {
         justify-content: center;
     }
 
-    nav div {
+    .menuOption {
         display: flex;
         justify-content: center;
         height: 1.5rem;
         width: 5rem;
+        margin: 0;
     }
 
     nav h2 {
@@ -916,11 +976,6 @@ iframe {
     nav:hover {
         width: calc(100% - 1rem);
     }
-
-    nav div svg {
-        margin: 0 1rem;
-    }
-
     iframe {
         width: 70%;
         height: 13rem;
@@ -940,20 +995,12 @@ iframe {
 }
 
 @media screen and (max-width:500px) {
-    nav div {
+    .menuOption {
         display: flex;
         justify-content: center;
         height: 3rem;
         width: 3rem;
         padding: 0;
-    }
-
-    nav div svg {
-        margin: 0;
-    }
-
-    nav:hover svg {
-        margin: 0;
     }
 
     iframe {
