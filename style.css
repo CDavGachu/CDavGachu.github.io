@@ -937,8 +937,8 @@ iframe {
     padding: 1rem;
     width: calc(100% - 2rem);
     text-align: justify;
-    background-color: var(--colored-background);
-    outline: var(--colored-border) solid 2px;
+    /* background-color: var(--colored-background);
+    outline: var(--colored-border) solid 2px; */
     color: #303030;
 }
 .phrase:hover {
@@ -990,7 +990,7 @@ iframe {
     }
     #navButtons {
         position: fixed;
-        height: 4rem;
+        height: 5rem;
         bottom: 0;
         left: 0;
         right: 0;
