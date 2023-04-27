@@ -1,10 +1,10 @@
 :root {
     --gray: #868383;
     --bck: #f0eeee; 
-    --back: #f8f8f8; 
+    --back: #f0f0f0; 
     --light-bck: #fff;
-    --primary: #e4b51a;
-    --light-primary: #ffedb070;
+    --primary: #d6a912;
+    --light-primary: #ffe28370;
     --card-bck:#fff;
     --icon-color: #b6deff;
     --icon-color-fill: #2e7ec0;
@@ -83,9 +83,8 @@ header {
 #profile {
     display: flex;
     align-items: center;
-    width: 6rem;
-    justify-content: space-around;
-    padding-right: 1rem;
+    width: 12rem;
+    justify-content: right;
 
     -webkit-tap-highlight-color: transparent;
     outline: none;
@@ -152,7 +151,9 @@ nav {
     height: 1.5rem;
 
 }
-
+#avatarBtn {
+    margin: 0 1rem;
+}
 .avatarSmall {
     height: 2.5rem;
     border-radius: 100%;
@@ -389,6 +390,7 @@ nav {
     fill: var(--primary);
     justify-content: space-between;
     width: 12rem;
+    padding-left: 1rem;
 }
 #mainLogo svg {
     transform: rotate(0deg);
@@ -401,7 +403,8 @@ nav {
     transform: rotate(360deg);
 }
 h1 {
-    font-family: 'Montserrat', serif;
+    font-family: 'Poppins', serif;
+    font-weight: 900;
     font-size: 1.5rem;
     transition: color 150ms;
     user-select: none;
@@ -945,12 +948,58 @@ iframe {
     outline: var(--colored-border) solid 2px;
 
 }
+
+#suggestions {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    height: calc(7rem + 4px);
+    width: 100%;
+    overflow-x: scroll;
+}
+.suggestion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 6rem;
+    width: 6rem;
+    border: var(--bck) solid 2px;
+    border-radius: 1rem;
+    background-color: var(--icon-color);
+    margin: 0 0.5rem;
+    user-select: none;
+}
+.suggestionIcon {
+    display: flex;
+    align-items: center;
+    height: 60%;
+    width: 6rem;
+}
+.suggestion svg {
+    fill: var(--icon-color-fill);
+    height: 2.5rem;
+}
+.suggestion p {
+    margin: 0;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 calc(1rem - 2px) calc(1rem - 2px);
+    font-size: smaller;
+    background-color: var(--card-bck);
+}
 @media screen and (max-width:800px) {
     .menuOption svg {
         height: 2rem;
     }
     #profile {
         padding: 0;
+    }
+    #mainLogo {
+        padding-left: 0.5rem;
     }
     #calendarSection, #homeContent, #contenido {
         flex-direction: column;

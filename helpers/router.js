@@ -7,7 +7,7 @@ const call = document.getElementById("btnCall");
 const app = document.getElementById("app");
 let firstLoad = true;
 
-let homeHTML, calendarHTML, callHTML, formHTML, resHTML;
+let homeHTML, calendarHTML, callHTML, formHTML, resHTML, landingHTML, loggedHTML;
 let loaded = false;
 const loadComponents = async () => {
 
@@ -16,14 +16,25 @@ const loadComponents = async () => {
     const calendarHtmlUrl = new URL("../components/calendar.html", import.meta.url);
     const resHtmlUrl = new URL("../components/resources.html", import.meta.url);
     const callHtmlUrl = new URL("../components/call.html", import.meta.url);
+    const landingHtmlUrl = new URL("../components/landing.html", import.meta.url);
+    const loggedHtmlUrl = new URL("../components/loggedIndex.html", import.meta.url);
 
     homeHTML = await fetch(homeHtmlUrl).then(response => response.text());
     formHTML = await fetch(formHtmlUrl).then(response => response.text());
     calendarHTML = await fetch(calendarHtmlUrl).then(response => response.text());
     resHTML = await fetch(resHtmlUrl).then(response => response.text());
     callHTML = await fetch(callHtmlUrl).then(response => response.text());
+    landingHTML = await fetch(landingHtmlUrl).then(response => response.text());
+    loggedHTML = await fetch(loggedHtmlUrl).then(response => response.text());
     
     loaded = true;
+}
+window.loadFirst = ( landing ) => {
+    const [ index ] = document.getElementsByTagName("body");
+    if(landing)
+        index.innerHTML = landingHTML;
+    else 
+        index.innerHTML = loggedHTML;
 }
 loadComponents();
 window.router = async (page)=>{
@@ -33,14 +44,20 @@ window.router = async (page)=>{
         sessionStorage.setItem("page", page);
     }
     firstLoad = false;
-    
+    if(!loaded)
+        await loadComponents();
+
+    await verifySession();
+    if(!localStorage.getItem("refresh"))
+        return loadFirst(true);
+    else 
+        loadFirst( false );
+
     form.classList.remove("navActive");
     home.classList.remove("navActive");
     calendar.classList.remove("navActive");
     resources.classList.remove("navActive");
     call.classList.remove("navActive");
-    if(!loaded)
-        await loadComponents();
     if(page == 0){
         app.innerHTML = homeHTML;
         home.classList.add("navActive");
