@@ -1,10 +1,3 @@
-const home = document.getElementById("btnHome");
-const form = document.getElementById("btnForm");
-const calendar = document.getElementById("btnCalendar");
-const resources = document.getElementById("btnRes");
-const call = document.getElementById("btnCall");
-
-const app = document.getElementById("app");
 let firstLoad = true;
 
 let homeHTML, calendarHTML, callHTML, formHTML, resHTML, landingHTML, loggedHTML;
@@ -53,6 +46,12 @@ window.router = async (page)=>{
     else 
         loadFirst( false );
 
+    const home = document.getElementById("btnHome");
+    const form = document.getElementById("btnForm");
+    const calendar = document.getElementById("btnCalendar");
+    const resources = document.getElementById("btnRes");
+    const call = document.getElementById("btnCall");
+    
     form.classList.remove("navActive");
     home.classList.remove("navActive");
     calendar.classList.remove("navActive");
