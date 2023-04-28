@@ -37,14 +37,15 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
     margin: 1rem;
-    background-color: var(--bck);
+    background-color: #fff;
+    border: var(--bck) solid 2px;
     border-radius: 1rem;
     transition: background-color 150ms;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #e2e2e2;
+    background-color: #ececec;
 }
 
 * {
@@ -101,11 +102,11 @@ header {
     transition: fill 150ms, background-color 150ms;
 }
 
-#profile svg:hover {
+/* #profile svg:hover {
     fill: var(--primary);
     cursor: pointer;
     background-color: var(--light-primary);
-}
+} */
 
 nav {
     display: flex;
@@ -198,7 +199,7 @@ nav {
 }
 .growthPanel {
     display: flex;
-    height: 12rem;
+    height: 14rem;
     width: 12rem;
     transition: height 150ms, width 150ms;
 }
@@ -311,7 +312,6 @@ nav {
     color: var(--primary);
 }
 #profilePanel .options:hover svg {
-    background-color: var(--light-primary);
     fill: var(--primary);
     color: var(--primary);
 }
@@ -446,7 +446,9 @@ h3 {
     margin: 0;
     font-size: 2rem;
 }
-
+iframe {
+    box-shadow: none!important;
+}
 .calendarSectionInvisible {
     filter: opacity(0%);
     transition: filter 150ms;
@@ -454,14 +456,14 @@ h3 {
 .calendarSectionVisible {
     filter: opacity(100%);
 }
-
+c
 #calendarApp {
     width: 100%;
     padding-bottom: 4rem;
     transition: filter 150ms;
 }
 #calendarApp h3 {
-    margin: 1rem 0;
+    margin-bottom: 1rem;
 }
 #hours {
     padding-top: 1rem;
@@ -555,7 +557,7 @@ h3 {
     background-color: var(--card-bck);
     /* border: var(--bck) solid 2px; */
     border-radius: 1rem;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     margin: 1rem 0;
 }
 #firstC {
@@ -991,7 +993,87 @@ iframe {
     font-size: smaller;
     background-color: var(--card-bck);
 }
+#resVideos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.video {
+    margin: 0.5rem;
+}
+
+.landing h2{
+    font-size: 4rem;
+    margin: 0;
+    margin-top: 3rem;
+}
+#mainLanding {
+    display: flex;
+    justify-content: space-between;
+}
+#mainLanding p {
+    font-weight: 300;
+    color: #868383;
+}
+#mainLanding button {
+    font-weight: 600;
+    font-size: larger;
+    width: 10rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+}
+#main {
+    background-color: var(--light-primary);
+    color: var(--primary);
+}
+#mainButtons {
+    display: flex;
+    
+}
+#secondary {
+    background-color: var(--bck);
+    border: #8683831c solid 2px;
+    color: #8683839d;
+    margin:0 1rem;
+}
+#containerPhoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+#firstL {
+    width: 50%;
+}
+#landingPhoto {
+    width: 70%;
+    margin-left: 14rem;
+}
+#headerbtns {
+    display: flex;
+    width: 20rem;
+}
+.headerButtons {
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    font-weight: bold;
+}
 @media screen and (max-width:800px) {
+    .landing h2 {
+        font-size: 12vw;
+    }
+    #containerPhoto {
+        display: none;
+    }
+    #firstL {
+        width: 100%;
+    }
     .menuOption svg {
         height: 2rem;
     }
@@ -1071,9 +1153,9 @@ iframe {
     #resVideos {
         width: 100%;
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 
     .menuOption {

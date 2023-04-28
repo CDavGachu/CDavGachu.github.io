@@ -37,15 +37,22 @@ window.router = async (page)=>{
         sessionStorage.setItem("page", page);
     }
     firstLoad = false;
+
     if(!loaded)
         await loadComponents();
 
-    await verifySession();
-    if(!localStorage.getItem("refresh"))
-        return loadFirst(true);
-    else 
-        loadFirst( false );
+    const urlParams = new URLSearchParams(window.location.search);
+    const grantCode = urlParams.get('code');
 
+    console.log(grantCode);
+
+    if(!localStorage.getItem("refresh") && !grantCode)
+        return loadFirst(true);
+    else {
+        await verifySession();
+        loadFirst( false );
+    }
+        
     const home = document.getElementById("btnHome");
     const form = document.getElementById("btnForm");
     const calendar = document.getElementById("btnCalendar");
