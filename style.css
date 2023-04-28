@@ -1012,6 +1012,7 @@ iframe {
 #mainLanding {
     display: flex;
     justify-content: space-between;
+    margin: 6rem 0;
 }
 #mainLanding p {
     font-weight: 300;
@@ -1054,7 +1055,7 @@ iframe {
 }
 #headerbtns {
     display: flex;
-    width: 20rem;
+    width: fit-content;
 }
 .headerButtons {
     width: 7rem;
@@ -1069,9 +1070,6 @@ iframe {
         margin-left: 0;
         margin-right: 0;
 
-    }
-    #headerbtns {
-        width: 50%;
     }
     .headerButtons {
         font-size: 0.8rem;
@@ -1220,6 +1218,9 @@ iframe {
 }
 
 @media screen and (max-width:500px) {
+    #headerbtns {
+        width: 50%;
+    }
     h3 {
         font-size: larger;
     }

@@ -62,8 +62,8 @@ const toSignin = () => {
     if(getTesting())
         window.location.replace('https://shineagain.auth.us-east-2.amazoncognito.com/oauth2/authorize?client_id=5g726fbmspvp9f3p6cc3s8q0qf&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+test%2Fread+test%2Fwrite&redirect_uri=http%3A%2F%2Flocalhost%3A5500%2F');
     else 
-        window.location.replace('https://shineagain.auth.us-east-2.amazoncognito.com/oauth2/authorize?client_id=5g726fbmspvp9f3p6cc3s8q0qf&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+test%2Fread+test%2Fwrite&redirect_uri=https%3A%2F%2Fwww.shine-again.me%2F');
+        window.location.replace('https://shineagain.auth.us-east-2.amazoncognito.com/oauth2/authorize?client_id=5g726fbmspvp9f3p6cc3s8q0qf&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+test%2Fread+test%2Fwrite&redirect_uri=https%3A%2F%2Fshine-again.me%2F');
 }
 const toSignup = () => {
-    window.location.replace('https://shineagain.auth.us-east-2.amazoncognito.com/signup?client_id=5g726fbmspvp9f3p6cc3s8q0qf&redirect_uri=https%3A%2F%2Fwww.shine-again.me%2F&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+test%2Fread+test%2Fwrite');
+    window.location.replace('https://shineagain.auth.us-east-2.amazoncognito.com/signup?client_id=5g726fbmspvp9f3p6cc3s8q0qf&redirect_uri=https%3A%2F%2Fshine-again.me%2F&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+test%2Fread+test%2Fwrite');
 }
