@@ -1005,18 +1005,20 @@ iframe {
 }
 
 .landing h2{
-    font-size: 4rem;
+    font-size: 4vw;
     margin: 0;
-    margin-top: 3rem;
 }
 #mainLanding {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin: 6rem 0;
+    margin: 5rem 0;
+    height: calc(100vh - 6rem);
 }
 #mainLanding p {
     font-weight: 300;
     color: #868383;
+    font-size: 1vw;
 }
 #mainLanding button {
     font-weight: 600;
@@ -1045,13 +1047,16 @@ iframe {
     justify-content: center;
     align-items: center;
     width: 50%;
+    height: 100%;
 }
 #firstL {
     width: 50%;
 }
 #landingPhoto {
-    width: 70%;
+    width: 100%;
+    height: 80%;
     margin-left: 14rem;
+    object-fit: contain;
 }
 #headerbtns {
     display: flex;
@@ -1065,7 +1070,7 @@ iframe {
     height: 3rem;
     font-weight: bold;
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width:1000px) {
     #app.landing {
         margin-left: 0;
         margin-right: 0;
@@ -1080,12 +1085,16 @@ iframe {
     .landing h2 {
         font-size: 12vw;
     }
+    #mainLanding p {
+        font-size: 3vw;
+    }
     #firstL {
         padding: 1rem;
         width: calc(100% - 2rem)!important;
     }
     #mainLanding {
         flex-direction: column;
+        justify-content:left
     }
     #containerPhoto {
         margin-top: 2rem;
@@ -1248,7 +1257,21 @@ iframe {
         border: none;
     }
 }
-
+@media screen and (max-width:400px) {
+    #headerbtns #secondary {
+        display: none;
+    }
+    #headerbtns {
+        justify-content: right;
+    }
+    h1 {
+        font-size: large;
+    }
+    #mainButtons button {
+        width: 50%;
+        font-size: 90%;
+    }
+}
 
 .lds-ripple {
     display: inline-block;
