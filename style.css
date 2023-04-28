@@ -1065,11 +1065,39 @@ iframe {
     font-weight: bold;
 }
 @media screen and (max-width:800px) {
+    #app.landing {
+        margin-left: 0;
+        margin-right: 0;
+
+    }
+    #headerbtns {
+        width: 50%;
+    }
+    .headerButtons {
+        font-size: 0.8rem;
+    }
+    #secondary {
+        margin: 0 0.5rem;
+    }
     .landing h2 {
         font-size: 12vw;
     }
+    #firstL {
+        padding: 1rem;
+        width: calc(100% - 2rem)!important;
+    }
+    #mainLanding {
+        flex-direction: column;
+    }
     #containerPhoto {
-        display: none;
+        margin-top: 2rem;
+        background-color: var(--light-primary);
+        width: 100%;
+        height: 25rem;
+        justify-content: right;
+    }
+    #landingPhoto {
+        margin: 0;
     }
     #firstL {
         width: 100%;
