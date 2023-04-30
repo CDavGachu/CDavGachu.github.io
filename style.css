@@ -10,6 +10,12 @@
     --icon-color-fill: #2e7ec0;
     --colored-background: #fafdff;
     --colored-border: #c7deff;
+
+    --primary-color: lightsteelblue;
+    --secondary-color: lightpink;
+    --large: 200px;
+    --small: 10px;
+    --timing: 12s;
     /* --gray: #889bb4;
     --bck: #c9e5f8; 
     --light-bck: #fff;
@@ -737,6 +743,7 @@ td:not(.empty):hover {
 }
 #respuestas {
     display: flex;
+    justify-content: left;
     flex-direction: column;
 }
 #respuestas div {
@@ -1070,11 +1077,73 @@ iframe {
     height: 3rem;
     font-weight: bold;
 }
+#resourcesBtns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0;
+}
+#resourcesBtns button {
+    width: 8rem;
+    height: 8rem;
+    margin: 0.5rem;
+    background-color: var(--light-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.rbtnIcons {
+    height: 3rem;
+    width: 3rem;
+    fill: var(--primary);
+}
+.miniHeader {
+    display: flex;
+    align-items: center;
+}
+.miniHeader svg {
+    height: 1.5rem;
+}
+#resources {
+    display: flex;
+}
+#breathingContainer {
+    width: 100%;
+    height: calc(var(--large) + 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#breathing {
+    background-color: var(--primary-color);
+    width: var(--small);
+    height: var(--small);
+    border-radius: calc( var(--small) / 2);
+    display: inline-block;
+    animation: breath var(--timing) ease infinite none running
+}
+#temporizador {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.imagenp {
+    height: 6rem;
+    margin: 1rem;
+    object-fit: contain;
+}
 @media screen and (max-width:1000px) {
+    .card {
+        padding: 1rem;
+    }
     #app.landing {
         margin-left: 0;
         margin-right: 0;
 
+    }
+    #resources {
+        flex-direction: column;
     }
     .headerButtons {
         font-size: 0.8rem;
@@ -1320,3 +1389,11 @@ iframe {
     }
   }
   
+  @keyframes breath {
+    25%, 50% {
+       background-color: lightpink;
+       width: 200px;
+       height: 200px;
+       border-radius: 100px;
+    }   
+   }
