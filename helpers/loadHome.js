@@ -13,7 +13,7 @@ const loadHome = async () => {
         redirect: 'follow'
     };
     
-    fetch("https://fz853w9zuj.execute-api.us-east-2.amazonaws.com/dev/user?accessToken=" + localStorage.getItem("access"), requestOptions)
+    fetch("https://fz853w9zuj.execute-api.us-east-2.amazonaws.com/dev/user", requestOptions)
     .then(response => response.json())
     .then(async (result) => {
         console.log(result)
@@ -37,6 +37,7 @@ const loadHome = async () => {
             ¡Bienvenido, ${userData.UserAttributes.find(attribute => attribute.Name == "given_name").Value+"!"}`;
             document.getElementById("homeContent").classList.add("cabecera","cVisible");
             document.getElementById("loadingHTML").style.display = "none";
+
             sessionStorage.setItem("user", userData.Username);
             sessionStorage.setItem("given_name", userData.UserAttributes.find(attribute => attribute.Name == "given_name").Value);
             sessionStorage.setItem("family_name", userData.UserAttributes.find(attribute => attribute.Name == "family_name").Value);

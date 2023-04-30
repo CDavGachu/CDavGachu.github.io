@@ -40,9 +40,14 @@ const verifySession = async () => {
 const refreshToken = async () => {
     console.log("refrescando...");
     const refreshToken = localStorage.getItem("refresh");
+    
     if (refreshToken) {
+        let myHeaders = new Headers();
+        myHeaders.append("Authorization", localStorage.getItem("refresh"));
+        
         let requestOptions = {
             method: 'POST',
+            headers: myHeaders,
             redirect: 'follow'
         };
 

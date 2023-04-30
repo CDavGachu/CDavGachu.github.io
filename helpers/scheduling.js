@@ -15,10 +15,10 @@ const getAppointmentsByDay = async (day) => {
 
     return await fetch(`https://fz853w9zuj.execute-api.us-east-2.amazonaws.com/dev/citas/dias?fecha=${day}`, requestOptions)
         .then(response => response.json())
-        .then(result => {
+        .then(async result => {
             if (result.message) {
-                if (result.message.includes("token has expired"))
-                    if (verifySession())
+                if (result.message.includes("token has expired") || result.message("Unauthorized"))
+                    if (await verifySession())
                         return location.reload();
             }
             return result;

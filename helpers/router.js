@@ -23,6 +23,7 @@ const loadComponents = async () => {
     loaded = true;
 }
 window.loadFirst = ( landing ) => {
+    console.log("Loading landing?", landing)
     const [ index ] = document.getElementsByTagName("body");
     if(landing)
         index.innerHTML = landingHTML;
@@ -37,21 +38,21 @@ window.router = async (page)=>{
         sessionStorage.setItem("page", page);
     }
     firstLoad = false;
-
-    if(!loaded)
-        await loadComponents();
-
+    
     const urlParams = new URLSearchParams(window.location.search);
     const grantCode = urlParams.get('code');
 
-    console.log(grantCode);
-
-    if(!localStorage.getItem("refresh") && !grantCode)
-        return loadFirst(true);
-    else {
-        await verifySession();
-        loadFirst( false );
+    if(!loaded){
+        await loadComponents();
+        if(!localStorage.getItem("refresh") && !grantCode)
+            return loadFirst(true);
+        else {
+            await verifySession();
+            loadFirst( false );
+        }
     }
+
+
         
     const home = document.getElementById("btnHome");
     const form = document.getElementById("btnForm");
