@@ -24,7 +24,7 @@ const getAppointmentsByDay = async (day) => {
             return result;
         })
         .catch(error => {
-            console.log('error gay', error);
+            console.log('error', error);
         });
 }
 

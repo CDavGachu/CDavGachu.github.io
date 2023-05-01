@@ -131,7 +131,7 @@ const nextMonthBtn = document.getElementById("nextMonthBtn");
 
 // Generar el calendario para el mes actual al cargar la página
 const currentDate = new Date();
-window.generar = () => {
+window.generarCalendario = () => {
 	console.log("Hola estoy generando")
 	generateCalendar(currentDate);
 	getUserDates()

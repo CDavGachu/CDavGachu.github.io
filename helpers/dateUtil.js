@@ -11,9 +11,21 @@ function getDateByMonth(mes, dia) {
     const opciones = { month: 'long', day: 'numeric' };
     return fecha.toLocaleDateString('es-ES', opciones);
 }
+function getDateByISO(dateString) {
+    const fecha = new Date(dateString);
+    const opciones = { month: 'long', day: 'numeric' };
+    return fecha.toLocaleDateString('es-ES', opciones);
+}
 
 const getCurrentDate = () => {
     const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const day = String(currentDate.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+};
+const getSQLDate = (date) => {
+    const currentDate = new Date(date);
     const year = currentDate.getFullYear();
     const month = String(currentDate.getMonth() + 1).padStart(2, '0');
     const day = String(currentDate.getDate()).padStart(2, '0');

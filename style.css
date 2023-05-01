@@ -12,7 +12,7 @@
     --colored-border: #c7deff;
 
     --primary-color: lightsteelblue;
-    --secondary-color: lightpink;
+    --secondary-color: #2e7ec0;
     --large: 200px;
     --small: 10px;
     --timing: 12s;
@@ -427,7 +427,7 @@ h1 {
 }
 
 #app {
-    margin: 5rem;
+    margin: 5rem 2rem;
     height: auto;
     padding-bottom: 5rem;
 }
@@ -1123,15 +1123,259 @@ iframe {
     display: inline-block;
     animation: breath var(--timing) ease infinite none running
 }
+.breathInstructions {
+    text-align: center;
+}
+#tempoContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 #temporizador {
     display: flex;
-    width: 100%;
     justify-content: center;
+    border: var(--bck) solid 2px;
+    fill: var(--gray);
+    border-radius: 3rem;
+    width: 10rem;
+    padding: 1rem;
+}
+#temporizador svg {
+    height: 2rem;
+}
+#temporizador input {
+    border: none;
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    color: var(--gray);
 }
 .imagenp {
     height: 6rem;
     margin: 1rem;
     object-fit: contain;
+}
+#secondsDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#secondsDisplay p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a0a0a0;
+    color: white;
+    font-weight: bolder;
+    font-size: 3rem;
+    border-radius: 100%;
+    padding: 2rem;
+    height: 5rem;
+    width: 5rem;
+}
+#dateControls {
+    width: calc(100% - 1rem - 4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:1rem;
+    border: var(--bck) solid 2px;
+    padding: 0 0.5rem;
+}
+#datesByWeek p {
+    margin: 0;
+}
+#datesByWeek tr {
+    height: fit-content;
+}
+#weekRow {
+    height: 4rem!important;
+}
+#weekRow td {
+    outline: none;
+    transition: background-color 150ms;
+}
+#weekRow .other-month {
+    color: var(--gray);
+}
+#weekRow td:hover {
+    background-color: var(--bck);
+    outline: none;
+}
+#dateControls button{
+    width: 1rem;
+    padding: 0;
+}
+#monthContainer {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 1rem 0;
+}
+#monthInput {
+    border: none;
+    font-size: medium;
+    font-weight: bold;
+    width: fit-content;
+}
+#monthInput:focus {
+    outline: none;
+}
+.dateCard {
+    width: 100%;
+    border: var(--bck) solid 2px;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+.dateCard img {
+    height: 4rem;
+    padding: 1rem;
+}
+.dateHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    border-bottom: var(--bck) solid 2px;
+}
+.dateHeader p {
+    margin: 0.3rem;
+}
+.dateMain {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 2rem);
+    padding: 0 1rem;
+}
+.dateUser {
+    width: 80%;
+}
+.dateUser p{
+    margin: 0;
+}
+.dateBottom {
+    display: flex;
+    justify-content: right;
+    border-top: var(--bck) solid 2px;
+    width: 100%;
+}
+.dateBottom svg {
+    margin: 0.3rem;
+    height: 1.6rem;
+    fill: var(--gray);
+    transition: background-color 150ms, fill 150ms;
+    border-radius: 1rem;
+}
+.dateBottom svg:hover {
+    cursor: pointer;
+    background-color: var(--light-primary);
+    fill: var(--primary);
+}
+.userFirstName {
+    font-weight: bolder;
+}
+#searchUser {
+    display: flex;
+    border-radius: 1rem;
+    border: var(--bck) solid 2px;
+    padding: 1rem;
+    height: 2rem;
+    justify-content: space-around;
+    width: calc(100% - 2rem - 4px);
+    align-items: center;
+}
+#searchUser input {
+    border: none;
+    width: calc(100% - 2rem);
+    background-color: #ffffff00;
+}
+.searched {
+    border-radius: 1rem 1rem 0 0!important;
+    border-bottom: none!important;
+}
+#resultsContainer {
+    position: relative;
+    width: 100%;
+    display: none;
+}
+#psicoDate input:focus {
+    outline:none;
+}
+#psicoDay {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+}
+#searchUser svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.5rem;
+    fill: var(--gray);
+    border-radius: 100%;
+    transition: fill 150ms, background-color 150ms;
+}
+#searchUser svg:hover {
+    cursor: pointer;
+    fill: var(--primary);
+    background-color: var(--light-primary);
+}
+.searchSelected {
+    padding: 1rem 0!important;
+    width: calc(100% - 4px)!important;
+}
+#customUser {
+    display: none;
+}
+#schDate {
+    border: var(--bck) solid 2px;
+    border-radius: 1rem;
+    width: calc(100% - 2rem - 4px);
+    padding: 1rem;
+    height: 2rem;
+}
+#results {
+    position: absolute;
+    background-color: white;
+    width: calc(100% - 4px);
+    border: var(--bck) solid 2px;
+    border-top: none;
+    border-radius: 0 0 1rem 1rem!important;
+}
+.result {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 2rem - 4px);
+    justify-content: space-between;
+    border-top: var(--bck) solid 2px;
+
+    margin: 0 1rem;
+}
+.result svg {
+    height: 1.5rem;
+    width: 1.85rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 100%;
+    fill: var(--gray);
+    transition: fill 150ms, background-color 150ms;
+
+}
+.result svg:hover {
+    fill: var(--primary);
+    background-color: var(--light-primary);
+}
+.result div {
+    display: flex;
+    align-items: center;
+}
+.result img {
+    height: 2rem;
+    margin-right: 1rem;
+}
+.resultSelected {
+    border: none!important;
+    width: 100%;
 }
 @media screen and (max-width:1000px) {
     .card {
@@ -1391,7 +1635,7 @@ iframe {
   
   @keyframes breath {
     25%, 50% {
-       background-color: lightpink;
+       background-color: var(--secondary-color);
        width: 200px;
        height: 200px;
        border-radius: 100px;
