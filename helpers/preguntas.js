@@ -5,12 +5,17 @@ const preguntas = [
             "Bien",
             "Mal"
         ],
-        "instruccion": "fsdfs"
+        "instruccion": ""
     },
     {
-        "pregunta": "Iniciaremos con el nivel 1 de preguntas y respuestas...",
+        "pregunta": "",
         "imagen": "./src/avatar.png",
-        "instruccion": "fsdfs"
+        "instruccion": "Hola!, has llegado al nivel 1 del test de auto-ayuda. Recuerda contestar con la verdad"
+    },
+    {
+        "pregunta": "",
+        "imagen": "./src/avatar.png",
+        "instruccion": "Tendremos una serie de sintomas comunes que tenemos durante una crisis de ansiedad. <br> Lee con atencion cada uno de ellos e indica el valor que se ha presentado en la ultima semana incluyendo hoy"
     },
 
     {
@@ -19,9 +24,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
+            "Severamente"
         ],
-        "instruccion": "pues smn"
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -30,8 +35,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -40,8 +46,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -50,8 +57,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -60,8 +68,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -70,8 +79,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -80,8 +90,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -90,8 +101,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -100,8 +112,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -110,8 +123,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -120,8 +134,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -130,8 +145,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -140,8 +156,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -150,8 +167,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -160,8 +178,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -170,8 +189,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -180,8 +200,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -190,8 +211,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -200,8 +222,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -210,8 +233,9 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
@@ -220,23 +244,16 @@ const preguntas = [
             "En absoluto",
             "Levemente",
             "Moderadamente",
-            "severamente"
-        ]
+            "Severamente"
+        ],
+        "instruccion": "Responde honestamente"
 
     },
     {
-        "pregunta": "Sintoma:",
-        "respuestas": [
-            "En absoluto",
-            "Levemente",
-            "Moderadamente",
-            "severamente"
-        ]
-
+        "pregunta": "Puntuación",
+        "imagen": "./src/avatar.png",
+        "instruccion": "Has finalizado con el nivel 1, es necesario que inicies con el nivel 2"
     },
-
-
-
     {
         "pregunta": "Estado: <br> tristeza",
         "respuestas": [
@@ -368,6 +385,16 @@ const preguntas = [
 
     },
     {
+        "pregunta": "Estado: <br> Desvalorización",
+        "respuestas": [
+            "No siento que yo sea valioso",
+            "No me considero a mi mismo tan valioso y útil como solía considerarme ",
+            "Me siento menos valioso cuando me comparo con otros",
+            "Siento que no valgo nada"
+        ]
+
+    },
+    {
         "pregunta": "Estado: <br> Pérdida de energía",
         "respuestas": [
             "Tengo tanta energía como siempre",
@@ -443,7 +470,11 @@ const preguntas = [
         ]
 
     },
-
+    {
+        "pregunta": "Puntuación:",
+        "imagen": "./src/avatar.png",
+        "instruccion": "Has finalizado con el nivel 2"
+    }
 
 ]
 
@@ -451,30 +482,152 @@ let preguntaActual = 0;
 let puntaje = 0;
 const siguientePregunta = () => {
     const textopregunta = document.getElementById("preguntaActual");
-    if (preguntaActual == preguntas.length - 1) return;
-    if (verificar()) {
+    if(preguntaActual==preguntas.length-1)return;
+    if(verificar()){
         preguntaActual++
+        if(preguntaActual == 25)
+            puntaje == 0;
         generar();
-        if(preguntaActual<=22)
-            textopregunta.innerHTML = `${preguntaActual + 1}/22 `;
-        else 
-            textopregunta.innerHTML = `${(preguntaActual + 1)-22}/20 `;
-    }
+        console.log("Pregunta:",preguntaActual);
+        if(preguntaActual < 24)
+            textopregunta.innerHTML = preguntaActual >= 3 ? (preguntaActual -2) +"/21": "-";
+        else
+            textopregunta.innerHTML = preguntaActual >= 25 ? (preguntaActual -24) +"/21": "-";
+
+        if(preguntaActual == 24) {
+            if(puntaje < 22){
+                const pregunta = document.getElementById("pregunta");
+                const respuesta = document.getElementById("respuestas");
+                const buttonContainer = document.getElementById("buttonContainer");
+                buttonContainer.style.display = "none";
+
+                pregunta.innerHTML = "Puntuación: " + puntaje;
+                respuesta.innerHTML = `
+                <div id="levelResult">
+                    <div id="resultPhrase">
+                        <p>No Renuncies, no te rindas, no dejes de creer</p>
+                    </div>
+                    <img class="imagenp" src="./src/avatar.png">
+                    <div id="resultButtons">
+                        <button onclick="router(3)">Consejos</button>
+                        <button onclick="router(0)">Diario</button>
+                    </div>
+                </div>
+                `;
+            }
+            else {
+                const pregunta = document.getElementById("pregunta");
+                const respuesta = document.getElementById("respuestas");
+        
+                pregunta.innerHTML = "Puntuación: " + puntaje;
+                respuesta.innerHTML = `
+                <div id="levelResult">
+                    <div id="resultPhrase">
+                        <p>Has completado el nivel 1, es necesario que continúes con el nivel 2</p>
+                    </div>
+                    <img class="imagenp" src="./src/avatar.png">
+                </div>
+                `;
     
+            }
+        }
+        
+        if(preguntaActual == preguntas.length - 1) {
+        
+            const pregunta = document.getElementById("pregunta");
+            const respuesta = document.getElementById("respuestas");
+            const buttonContainer = document.getElementById("buttonContainer");
+            buttonContainer.style.display = "none";
+
+            pregunta.innerHTML = "Puntuación: " + puntaje;
+            respuesta.innerHTML = `
+            <div id="levelResult">
+                <div id="resultPhrase">
+                    <p>${puntaje < 14 ? "Depresión mínima" : puntaje < 20 ? "Depresión leve" : puntaje < 29 ? "Depresión moderada" : "Depresión grave"}</p>
+                </div>
+                <img class="imagenp" src="./src/avatar.png">
+                <div id="resultButtons">
+                    <button onclick="router(2)">Agendar cita</button>
+                </div>
+            </div>
+            `;
+        }
+    }
+        
 }
+    
 const anteriorPregunta = () => {
     const textopregunta = document.getElementById("preguntaActual");
-    if (preguntaActual == 0) return;
+    if(preguntaActual==0)return;
     preguntaActual--;
+    if(preguntaActual == 25)
+        puntaje == 0;
     generar();
-    textopregunta.innerHTML = preguntaActual + 1;
+    if(preguntaActual < 24)
+        textopregunta.innerHTML = preguntaActual >= 3 ? (preguntaActual -2) +"/21": "-";
+    else
+        textopregunta.innerHTML = preguntaActual >= 25 ? (preguntaActual -24) +"/21": "-";
     console.log(preguntaActual);
-    if (!preguntas[preguntaActual].imagen) {
-        const respuesta = document.getElementById("res" + preguntas[preguntaActual].seleccionada);
-        respuesta.checked = true;
-        puntaje -= preguntas[preguntaActual].seleccionada;
+    if(!preguntas[preguntaActual].imagen){
+        const respuesta=document.getElementById("res"+preguntas[preguntaActual].seleccionada);
+        respuesta.checked=true;
+        puntaje-=preguntas[preguntaActual].seleccionada;
     }
+    if(preguntaActual == 24) {
+        if(puntaje < 22){
+            const pregunta = document.getElementById("pregunta");
+            const respuesta = document.getElementById("respuestas");
+    
+            pregunta.innerHTML = "Puntuación: " + puntaje;
+            respuesta.innerHTML = `
+            <div id="levelResult">
+                <div id="resultPhrase">
+                    <p>No Renuncies, no te rindas, no dejes de creer</p>
+                </div>
+                <img class="imagenp" src="./src/avatar.png">
+                <div id="resultButtons">
+                    <button onclick="router(3)">Consejos</button>
+                    <button onclick="router(0)">Diario</button>
+                </div>
+            </div>
+            `;
+        }
+        else {
+            const pregunta = document.getElementById("pregunta");
+            const respuesta = document.getElementById("respuestas");
+    
+            pregunta.innerHTML = "Puntuación: " + puntaje;
+            respuesta.innerHTML = `
+            <div id="levelResult">
+                <div id="resultPhrase">
+                    <p>Has completado el nivel 1, es necesario que continúes con el nivel 2</p>
+                </div>
+                <img class="imagenp" src="./src/avatar.png">
+            </div>
+            `;
 
+        }
+    }
+    if(preguntaActual == preguntas.length - 1) {
+    
+        const pregunta = document.getElementById("pregunta");
+        const respuesta = document.getElementById("respuestas");
+        const buttonContainer = document.getElementById("buttonContainer");
+        buttonContainer.style.display = "none";
+
+        pregunta.innerHTML = "Puntuación: " + puntaje;
+        respuesta.innerHTML = `
+        <div id="levelResult">
+            <div id="resultPhrase">
+                <p>${puntaje < 14 ? "Depresión mínima" : puntaje < 20 ? "Depresión leve" : puntaje < 29 ? "Depresión moderada" : "Depresión grave"}</p>
+            </div>
+            <img class="imagenp" src="./src/avatar.png">
+            <div id="resultButtons">
+                <button onclick="router(2)">Agendar cita</button>
+            </div>
+        </div>
+        `;
+    }
 }
 const generar = () => {
     const label = document.getElementById("pregunta");
@@ -511,7 +664,7 @@ const verificar = () => {
                 }
             }
             else {
-                preguntas[preguntaActual].seleccionada = parseInt(incisos.find(inciso => inciso.checked).value);
+                preguntas[preguntaActual].seleccionada= parseInt(incisos.find(inciso => inciso.checked).value);
                 puntaje += parseInt(incisos.find(inciso => inciso.checked).value);
                 console.log(puntaje);
             }
