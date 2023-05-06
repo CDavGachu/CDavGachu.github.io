@@ -259,9 +259,10 @@ const preguntas = [
         "respuestas": [
             "No me siento triste",
             "Me siento triste gran parte del tiempo",
-            "Me siento trsite todo el tiempo",
-            "Me siento tan trsite o soy tan infeliz que no puedo soportarlo"
-        ]
+            "Me siento triste todo el tiempo",
+            "Me siento tan triste o soy tan infeliz que no puedo soportarlo"
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -271,7 +272,8 @@ const preguntas = [
             "Me siento más desalentado respecto de mi futuro que lo que solía estarlo",
             "No espero que las cosas funcionen para mi",
             "siento que no hay esperanza para mi futuro y que sólo puede empeorar"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -281,7 +283,8 @@ const preguntas = [
             "He fracasado más de lo que hubiera dabido",
             "Cuando miro hacia atrás, veo muchos fracasos",
             "Siento que como persona soy un fracaso total"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -291,7 +294,8 @@ const preguntas = [
             "No disfruto tanto de las cosas como solía hacerlo",
             "Obtengo muy poco placer de las cosas que solia disfrutar",
             "No puedo obtener ningún placer de las cosas de las que solía disfrutar"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -301,7 +305,8 @@ const preguntas = [
             "Me siento culpable respecto de varias cosas que he hecho o que debería haber hecho",
             "Me siento bastante culpable la mayor parte de tiempo",
             "Me siento culpable todo el tiempo"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -311,7 +316,8 @@ const preguntas = [
             "Siento que tal vez pueda ser castigado",
             "Espero ser castigado",
             "Siento que estoy siendo castigado"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -321,7 +327,8 @@ const preguntas = [
             "He perdido la confianza en mí mismo",
             "Estoy decepcionado conmigo mismo",
             "No me gusto a mí mismo"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -331,7 +338,8 @@ const preguntas = [
             "Estoy más critico conmigo mismo de lo que solía estarlo",
             "Me critico a mí mismo por todos mis errores",
             "Me culpo a mí mismo por todo lo malo que sucede"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -341,7 +349,8 @@ const preguntas = [
             "He tenido pensamientos de matarme, pero no lo haría",
             "Querría matarme",
             "Me mataría si tuviera la oportinidad de hacerlo"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -351,7 +360,8 @@ const preguntas = [
             "Lloro más de lo que solía hacerlo",
             "Lloro por cualquier pequeñez",
             "Siento ganas de llorar pero no puedo"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -361,7 +371,8 @@ const preguntas = [
             "Me siento más inquieto o tenso que lo habitual",
             "Estoy tan inquieto o agitado que me es difícil quedarme quieto",
             "Estoy tan inquieto o agitado que tengo que estar siempre en movimiento o haciendo algo"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -371,7 +382,8 @@ const preguntas = [
             "Estoy menos interesado que antes en otras personas o cosas",
             "He perdido casi todo el interés en otras personas o cosas",
             "Me es difícil interesarme por algo"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -381,7 +393,8 @@ const preguntas = [
             "Me resulta más dificil que de costumbre tomar decisiones",
             "Encuentro mucha más dificultad que antes para tomar decisiones",
             "Tengo problemas para tomar cualquier decisión"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -391,7 +404,8 @@ const preguntas = [
             "No me considero a mi mismo tan valioso y útil como solía considerarme ",
             "Me siento menos valioso cuando me comparo con otros",
             "Siento que no valgo nada"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -401,7 +415,8 @@ const preguntas = [
             "Tengo menos energía que la que solía tener",
             "No tengo sufienciente energía para hacer demasiado",
             "No tengo energía suficiente par hacer nada"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -414,7 +429,8 @@ const preguntas = [
             "Duermo mucho menos que lo habitual",
             "Duermo la mayor parte del día",
             "Me despierto 1-2 horas más temprano y no puedo volver a dormirme"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -424,7 +440,8 @@ const preguntas = [
             "Estoy más irritable que lo habitual",
             "Estoy mucho más irritable que lo habitual",
             "Estoy irritable todo el tiempo"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -437,7 +454,8 @@ const preguntas = [
             "Mi apetito es mucho mayor que lo habitual",
             "No tengo apetito en absoluto",
             "Quiero comer todo el día"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -447,7 +465,8 @@ const preguntas = [
             "No puedo concentrarme tan bien como habitualmente",
             "Me es difícil mantener la mente en algo por mucho tiempo",
             "Encuentro que no puedo concentrame en nada"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -457,7 +476,8 @@ const preguntas = [
             "Me fatigo o me canso más fácilmente que lo habitual",
             "Estoy demasiado fatigado o cansado para hacer muchas de las cosas que solía hacer",
             "Estoy demasiado fatigado o cansado para hacer la mayoría de las cosas que solía hacer"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -467,7 +487,8 @@ const preguntas = [
             "Estoy menos interesado en el sexo de lo que solía estarlo",
             "Estoy mucho menos interesado en el sexo",
             "He perdido completamnete el interés en el sexo"
-        ]
+        ],
+"instruccion": "Responde honestamente"
 
     },
     {
@@ -628,6 +649,11 @@ const anteriorPregunta = () => {
         </div>
         `;
     }
+}
+
+const resetForm = () => {
+    preguntaActual = 0;
+    puntaje = 0;
 }
 const generar = () => {
     const label = document.getElementById("pregunta");

@@ -8,8 +8,11 @@
     --card-bck:#fff;
     --icon-color: #b6deff;
     --icon-color-fill: #2e7ec0;
-    --colored-background: #fafdff;
-    --colored-border: #c7deff;
+
+    --colored-background: #f9f2ff;
+    --colored-border: #c79fe9;
+    --colored-light: #c69fe938;
+    --colored-fill: #c79fe9;
 
     --primary-color: lightsteelblue;
     --secondary-color: #2e7ec0;
@@ -752,7 +755,7 @@ td:not(.empty):hover {
     padding: 0.5rem;
 }
 #respuestas p {
-    height: 1.36rem;
+    height: fit-content;
     margin: 0;
     margin-left: 0.5rem;
 }
@@ -960,13 +963,34 @@ iframe {
     padding: 1rem;
     width: calc(100% - 2rem);
     text-align: justify;
-    /* background-color: var(--colored-background);
-    outline: var(--colored-border) solid 2px; */
+    background-color: var(--colored-background)!important;
+    outline: var(--colored-border) solid 2px!important;
     color: #303030;
+    margin: 0.5rem 0;
 }
 .phrase:hover {
-    outline: var(--colored-border) solid 2px;
-
+    outline: var(--colored-border) solid 40px;
+    justify-content: space-between;
+}
+.phrase p {
+    margin: 0;
+}
+.phrase svg {
+    height: 2rem;
+    width: 2rem;
+    padding: 0.3rem;
+    margin-left: 1rem;
+    fill: none;
+    stroke: var(--colored-border);
+    stroke-width: 4px;
+    border-radius: 100%;
+    transition: background-color 150ms, fill 150ms;
+}
+.phrase svg:hover {
+    cursor: pointer;
+    fill: var(--colored-border);
+    stroke-width: 0px;
+    background-color: var(--colored-light);
 }
 
 #suggestions {
@@ -990,9 +1014,13 @@ iframe {
     margin: 0 0.5rem;
     user-select: none;
 }
+.suggestion:hover {
+    cursor: pointer;
+}
 .suggestionIcon {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 60%;
     width: 6rem;
 }
@@ -1017,6 +1045,13 @@ iframe {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+#resPhrases, #resSaved {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
 }
 .video {
     margin: 0.5rem;
@@ -1115,6 +1150,9 @@ iframe {
 }
 .miniHeader svg {
     height: 1.5rem;
+}
+.miniHeader svg:hover {
+    cursor: pointer;
 }
 #resources {
     display: flex;
@@ -1563,7 +1601,6 @@ iframe {
         width: calc(100% - 1rem);
     }
     iframe {
-        width: 70%;
         height: 13rem;
     }
 

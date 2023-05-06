@@ -2,6 +2,7 @@ let firstLoad = true;
 
 let homeHTML, calendarHTML, callHTML, formHTML, resHTML, landingHTML, loggedHTML;
 let loaded = false;
+let psicoLoaded = false;
 const loadCalendar = async () => {
     console.log("Si es o no es:", await isPsico());
     const calendarHtmlUrl = new URL(`../components/calendar${await isPsico() ? "Psico" : ""}.html`, import.meta.url);
@@ -79,17 +80,21 @@ window.router = async (page)=>{
     if(page == 1) {
         app.innerHTML = formHTML;
         form.classList.add("navActive");
+        resetForm();
     }   
     if(page == 2){
         calendar.classList.add("navActive");
-        console.log("es psico: ", await isPsico());
         await loadCalendar();
         app.innerHTML = calendarHTML;
 
-        if(await isPsico()) {
+        if(psicoLoaded) {
+            updateWeekTable();
+        }
+        if(await isPsico() && !psicoLoaded) {
             const script = document.createElement('script');
             script.src = './helpers/psicocal.js'
             document.body.appendChild(script);
+            psicoLoaded = true;
         }
         else
             generarCalendario();
@@ -98,6 +103,7 @@ window.router = async (page)=>{
     if(page == 3){
         app.innerHTML = resHTML;
         resources.classList.add("navActive");
+        await fetchSaved();
     }
     if(page == 4){
         app.innerHTML = callHTML;
